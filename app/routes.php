@@ -11,6 +11,8 @@
 |
 */
 
+require_once('../vendor/cosenary/Instagram-PHP-API/instagram.class.php');
+
 Route::get('/', function()
 {
 	return View::make('hello');
@@ -24,6 +26,7 @@ Route::get('/authenticate', function()
 	session_start();
 	// Instantiate the API handler object
 	$instagram = new Instagram($instaConfig);
-	$accessToken = $instagram->getAccessToken();
+	$accessToken = $instagram->getOAuthToken($code);
 	$_SESSION['InstagramAccessToken'] = $accessToken;
+	echo $accessToken;
 });
