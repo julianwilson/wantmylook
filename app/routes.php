@@ -20,5 +20,10 @@ Route::get('/authenticate', function()
 {
 	// Get the code and pass it to our handshake script
 	$code = Input::get('code');
-	return $code;
+	
+	session_start();
+	// Instantiate the API handler object
+	$instagram = new Instagram($instaConfig);
+	$accessToken = $instagram->getAccessToken();
+	$_SESSION['InstagramAccessToken'] = $accessToken;
 });
