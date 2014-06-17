@@ -18,6 +18,7 @@ Route::get('/', function()
 
 Route::get('/authenticate', function()
 {
+	// Get the code and pass it to our handshake script
 	$code = Input::get('code');
 	return $code;
 });
