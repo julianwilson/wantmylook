@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
 	"name": "laravel/laravel",
 	"description": "The Laravel Framework.",
 	"keywords": ["framework", "laravel"],
@@ -38,28 +37,3 @@
 	},
 	"minimum-stability": "stable"
 }
-=======
-	"name": "cosenary/instagram",
-	"type": "library",
-	"description": "An easy-to-use PHP Class for accessing Instagram's API.",
-	"keywords": ["instagram", "api"],
-	"homepage": "https://github.com/cosenary/Instagram-PHP-API",
-	"license": "BSD",
-	"authors": [
-		{
-			"name": "Christian Metz",
-			"email": "christian-metz1@gmx.net",
-			"homepage": "http://metzweb.net"
-		}
-	],
-	"require": {
-		"php": ">=5.2.0",
-		"ext-curl": "*"
-	},
-	"autoload": {
-		"psr-0": {
-			"Instagram": "lib/"
-		}
-	}
-}
->>>>>>> d13b952feac0cccb3bface9a035fe5d7362f775d
