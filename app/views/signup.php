@@ -1,1 +1,1 @@
-<a href="<?php echo $url; ?>"><img src="<?php echo public_path(); ?>images/instagramCTA.jpg" /></a>
+<a href="<?php echo $url; ?>"><img src="images/instagramCTA.jpg" /></a>
