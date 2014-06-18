@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"cosenary/instagram": "2.1"
+		"artdarek/oauth-4-laravel": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
@@ -14,8 +14,7 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php",
-			"app/lib"
+			"app/tests/TestCase.php"
 		]
 	},
 	"scripts": {
