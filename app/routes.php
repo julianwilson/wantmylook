@@ -45,7 +45,6 @@ Route::get('/authenticate', function()
         // get ig authorization
         $url = $ig->getAuthorizationUri();
 
-        // return to instagram login url
-         return Redirect::to( (string)$url );
+        return View::make('signup')->with('url', (string)$url);
     }
 });
