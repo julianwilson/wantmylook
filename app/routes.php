@@ -21,4 +21,7 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('/authenticate', loginWithInstagram);
+Route::get('/authenticate', function()
+{
+	return 'yes';
+});
