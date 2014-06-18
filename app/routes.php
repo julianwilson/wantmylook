@@ -18,6 +18,12 @@ Route::get('/', function()
 
 Route::get('/authenticate', function()
 {
+	$instaConfig = array(
+        'apiKey' => 'e3f5ca5f0bb44527bf4d07b8af9b4e90',
+        'apiSecret' => '0b2710a239f140248262c63b0260bff6',
+        'apiCallback' => 'http://54.183.26.46/instaamp/authenticate',
+     );
+	 
 	// Get the code and pass it to our handshake script
 	$code = Input::get('code');
 	
@@ -26,5 +32,5 @@ Route::get('/authenticate', function()
 	$instagram = new Instagram($instaConfig);
 	$accessToken = $instagram->getOAuthToken($code);
 	$_SESSION['InstagramAccessToken'] = $accessToken;
-	echo $accessToken;
+	return $accessToken;
 });
