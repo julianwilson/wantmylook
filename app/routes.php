@@ -13,10 +13,7 @@
 
 function loginWithInstagram() {
 
-    // get data from input
-    $code = Input::get( 'code' );
-
-
+    return 'yes';
 }
 
 Route::get('/', function()
