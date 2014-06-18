@@ -11,9 +11,21 @@
 |
 */
 
+function loginWithInstagram() {
 
+    // get data from input
+    $code = Input::get( 'code' );
+
+    // get ig service
+    $ig = OAuth::consumer( 'Instagram' );
+
+    
+
+}
 
 Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/authenticate', loginWithInstagram);
