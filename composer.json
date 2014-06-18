@@ -2,16 +2,11 @@
 	"name": "laravel/laravel",
 	"description": "The Laravel Framework.",
 	"keywords": ["framework", "laravel"],
-	"license": "MIT",
-	"repositories": [
-        {
-            "url": "https://github.com/cosenary/Instagram-PHP-API.git",
-            "type": "git"
-        }
+	"license": "MIT"
     ],
 	"require": {
 		"laravel/framework": "4.2.*",
-		"cosenary/Instagram-PHP-API": "2.1"
+		"cosenary/instagram": “*”
 	},
 	"autoload": {
 		"classmap": [
@@ -20,7 +15,8 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php"
+			"app/tests/TestCase.php”,
+			“app/lib”
 		]
 	},
 	"scripts": {
