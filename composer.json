@@ -2,8 +2,7 @@
 	"name": "laravel/laravel",
 	"description": "The Laravel Framework.",
 	"keywords": ["framework", "laravel"],
-	"license": "MIT"
-    ],
+	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
 		"cosenary/instagram": “*”
