@@ -38,7 +38,7 @@ public function loginWithInstagram() {
     // if not ask for permission first
     else {
         // get ig authorization
-        $url = $fb->getAuthorizationUri();
+        $url = $ig->getAuthorizationUri();
 
         // return to instagram login url
          return Redirect::to( (string)$url );
