@@ -11,7 +11,7 @@
 |
 */
 
-public function loginWithInstagram() {
+function loginWithInstagram() {
 
     // get data from input
     $code = Input::get( 'code' );
