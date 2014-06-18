@@ -11,8 +11,6 @@
 |
 */
 
-require_once('../vendor/cosenary/Instagram-PHP-API/instagram.class.php');
-
 Route::get('/', function()
 {
 	return View::make('hello');
