@@ -20,6 +20,8 @@ Route::get('/authenticate', function()
 {
 	// get data from input
     $code = Input::get( 'code' );
+	$email = Input::get( 'email' );
+	$token = Session::get('lusitanian_oauth_token');
 
     // get ig service
     $ig = OAuth::consumer( 'Instagram' );
@@ -27,17 +29,23 @@ Route::get('/authenticate', function()
     // check if code is valid
 
     // if code is provided get user data and sign in
-    if ( !empty( $code ) ) {
+	if ( !empty($email) && isset($token)) {
+		// Insert email and token into database
+		return 'Insert into database';
+	}
+    else if ( !empty( $code ) ) {
 
         // This was a callback request from instagram, get the token
         $token = $ig->requestAccessToken( $code );
+		
+		return View::make('signup2');
 
         // Send a request with it
-        $result = json_decode( $ig->request( '/users/self/media/liked' ), true );
+        //$result = json_decode( $ig->request( '/users/self/media/liked' ), true );
 
         //Var_dump
         //display whole array().
-        dd($result);
+        //dd($result);
 
     }
     // if not ask for permission first
