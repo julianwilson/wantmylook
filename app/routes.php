@@ -21,7 +21,7 @@ Route::get('/authenticate', function()
 	// get data from input
     $code = Input::get( 'code' );
 	$email = Input::get( 'email' );
-	$token = Session::get('lusitanian_oauth_token');
+	$token = $_SESSION['lusitanian_oauth_token'];
 
     // get ig service
     $ig = OAuth::consumer( 'Instagram' );
